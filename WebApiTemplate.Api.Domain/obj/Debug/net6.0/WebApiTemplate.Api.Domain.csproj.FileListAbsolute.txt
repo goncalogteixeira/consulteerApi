@@ -1,0 +1,12 @@
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\bin\Debug\net6.0\WebApiTemplate.Api.Domain.deps.json
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\bin\Debug\net6.0\WebApiTemplate.Api.Domain.dll
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\bin\Debug\net6.0\WebApiTemplate.Api.Domain.pdb
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.csproj.AssemblyReference.cache
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.AssemblyInfoInputs.cache
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.AssemblyInfo.cs
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.dll
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\refint\WebApiTemplate.Api.Domain.dll
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\WebApiTemplate.Api.Domain.pdb
+C:\Users\Goncalo\Documents\consulteer\WebApiTemplate.Api.Domain\obj\Debug\net6.0\ref\WebApiTemplate.Api.Domain.dll
