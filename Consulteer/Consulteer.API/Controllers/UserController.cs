@@ -63,7 +63,9 @@ namespace Consulteer.API.Controllers
         {
             var user = await _userManager.FindByEmailAsync(email);
             var signIn = await _signInManager.PasswordSignInAsync(user, password, false, false);
-            return Ok(GenerateToken(user));
+            var role = await _userManager.GetRolesAsync(user);
+            var claims = await _userManager.GetClaimsAsync(user);
+            return Ok(GenerateToken(user, role.FirstOrDefault(), claims));
         }
 
         [AllowAnonymous]
@@ -93,15 +95,15 @@ namespace Consulteer.API.Controllers
         /// </summary>
         /// <param name="accountId"></param>
         /// <returns></returns>
-        private string GenerateToken(IdentityUser user)
+        private string GenerateToken(IdentityUser user, string role, IList<Claim> claims)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var claims = new[]
-            {
-                new Claim("Permission", "Permission.CanViewAllUsers"),
-                //new Claim(ClaimTypes.Role,user.Role)
-            };
+            claims.Add(new Claim(ClaimTypes.Name, user.Email));
+            claims.Add(new Claim(ClaimTypes.Role, role));
+               
+               
+            
             var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
                 _configuration["Jwt:Audience"],
                 claims,
