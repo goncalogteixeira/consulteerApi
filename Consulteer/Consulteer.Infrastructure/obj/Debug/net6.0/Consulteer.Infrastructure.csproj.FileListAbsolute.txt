@@ -1,0 +1,12 @@
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\bin\Debug\net6.0\Consulteer.Infrastructure.deps.json
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\bin\Debug\net6.0\Consulteer.Infrastructure.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\bin\Debug\net6.0\Consulteer.Infrastructure.pdb
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.AssemblyInfo.cs
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\refint\Consulteer.Infrastructure.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.pdb
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\ref\Consulteer.Infrastructure.dll

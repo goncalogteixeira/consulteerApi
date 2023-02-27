@@ -1,5 +1,9 @@
-﻿using Consulteer.API.Constants;
+﻿
+
+using Consulteer.API.Constants;
 using Microsoft.AspNetCore.Identity;
+using System.Data;
+using System.Security;
 using System.Security.Claims;
 
 namespace Consulteer.API.Seeds
@@ -54,6 +58,7 @@ namespace Consulteer.API.Seeds
         private async static Task SeedClaimsForSuperAdmin(this RoleManager<IdentityRole> roleManager)
         {
             var adminRole = await roleManager.FindByNameAsync("SuperAdmin");
+            await roleManager.AddClaimAsync(adminRole, new Claim("Permission", "Permission.CanViewAllUsers"));
             await roleManager.AddPermissionClaim(adminRole, "Users");
         }
         public static async Task AddPermissionClaim(this RoleManager<IdentityRole> roleManager, IdentityRole role, string module)

@@ -1,39 +1,72 @@
 ﻿using Consulteer.API.Constants;
+using Consulteer.API.Seeds;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security;
+using System.Security.Claims;
+using System.Text;
 
 namespace Consulteer.API.Controllers
 {
-    [Route("api/[controller]")]
+
+    [Authorize]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UsersController : Controller
         {
             private readonly UserManager<IdentityUser> _userManager;
-            public UsersController(UserManager<IdentityUser> userManager)
+            private readonly RoleManager<IdentityRole> _roleManager;
+            private readonly SignInManager<IdentityUser> _signInManager;
+            private readonly IConfiguration _configuration;
+
+        public UsersController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<IdentityUser> signInManager, IConfiguration configuration)
             {
                 _userManager = userManager;
-            }
+                _roleManager = roleManager;
+                _signInManager = signInManager;
+                _configuration = configuration;
+        }
 
-       
-        
+
+        [Authorize("Permission.CanViewAllUsers")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
             {
-                var currentUser = await _userManager.GetUserAsync(HttpContext.User);
-                var allUsersExceptCurrentUser = await _userManager.Users.Where(a => a.Id != currentUser.Id).ToListAsync();
+                var allUsersExceptCurrentUser = await _userManager.Users.ToListAsync();
                 return Ok(allUsersExceptCurrentUser);
             }
-
+        [Authorize(Roles = "SuperAdmin")]
         [HttpGet]
         public async Task<IActionResult> Me()
         {
             var currentUser = await _userManager.GetUserAsync(HttpContext.User); 
             return Ok(currentUser);
         }
+        
+        [HttpGet]
+        public async Task<IActionResult> Seed()
+        {
+            await DefaultRoles.SeedAsync(_userManager, _roleManager);
+            await DefaultRoles.SeedBasicUserAsync(_userManager, _roleManager);
+            await DefaultRoles.SeedSuperAdminAsync(_userManager, _roleManager);
+            return Ok();
+        }
 
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetUserToken(string email, string password)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            var signIn = await _signInManager.PasswordSignInAsync(user, password, false, false);
+            return Ok(GenerateToken(user));
+        }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Register(string email, string name, string password)
         {
@@ -55,6 +88,32 @@ namespace Consulteer.API.Controllers
             }
             return Problem();
         }
+        /// <summary>
+        /// Generate JWT Token after successful login.
+        /// </summary>
+        /// <param name="accountId"></param>
+        /// <returns></returns>
+        private string GenerateToken(IdentityUser user)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var claims = new[]
+            {
+                new Claim("Permission", "Permission.CanViewAllUsers"),
+                //new Claim(ClaimTypes.Role,user.Role)
+            };
+            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
+                _configuration["Jwt:Audience"],
+                claims,
+                expires: DateTime.Now.AddHours(15),
+                signingCredentials: credentials);
+
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+
+        }
+
+
     }
-    
+
 }

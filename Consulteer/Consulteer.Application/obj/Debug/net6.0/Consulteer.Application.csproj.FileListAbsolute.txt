@@ -1,0 +1,12 @@
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\bin\Debug\net6.0\Consulteer.Application.deps.json
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\bin\Debug\net6.0\Consulteer.Application.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\bin\Debug\net6.0\Consulteer.Application.pdb
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.csproj.AssemblyReference.cache
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.AssemblyInfoInputs.cache
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.AssemblyInfo.cs
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.csproj.CoreCompileInputs.cache
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\refint\Consulteer.Application.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\Consulteer.Application.pdb
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Application\obj\Debug\net6.0\ref\Consulteer.Application.dll

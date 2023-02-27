@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consulteer.API", "Consulteer.API\Consulteer.API.csproj", "{6C2956B4-19A8-4F32-976D-62C29572170F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consulteer.API", "Consulteer.API\Consulteer.API.csproj", "{6C2956B4-19A8-4F32-976D-62C29572170F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consulteer.Infrastructure", "Consulteer.Infrastructure\Consulteer.Infrastructure.csproj", "{1F48E89A-B12C-4EF0-9EB2-D217292FA692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consulteer.Application", "Consulteer.Application\Consulteer.Application.csproj", "{EB065F16-430D-42D1-8B96-5E0A9CBB16CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6C2956B4-19A8-4F32-976D-62C29572170F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C2956B4-19A8-4F32-976D-62C29572170F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C2956B4-19A8-4F32-976D-62C29572170F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F48E89A-B12C-4EF0-9EB2-D217292FA692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F48E89A-B12C-4EF0-9EB2-D217292FA692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F48E89A-B12C-4EF0-9EB2-D217292FA692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F48E89A-B12C-4EF0-9EB2-D217292FA692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB065F16-430D-42D1-8B96-5E0A9CBB16CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB065F16-430D-42D1-8B96-5E0A9CBB16CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB065F16-430D-42D1-8B96-5E0A9CBB16CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB065F16-430D-42D1-8B96-5E0A9CBB16CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
