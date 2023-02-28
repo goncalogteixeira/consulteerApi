@@ -1,5 +1,7 @@
 ﻿using Consulteer.API.Authorization;
+using Consulteer.Application.Interfaces;
 using Consulteer.Infrastructure.Repository;
+using Consulteer.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +33,7 @@ namespace Consulteer.Infrastructure
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
+            services.AddScoped<ITokenServices, TokenService>();
             return services;
         }
     }

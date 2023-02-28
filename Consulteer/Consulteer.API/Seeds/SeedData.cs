@@ -51,27 +51,10 @@ namespace Consulteer.API.Seeds
                     await userManager.AddToRoleAsync(defaultUser, Roles.Basic.ToString());
                     await userManager.AddToRoleAsync(defaultUser, Roles.Admin.ToString());
                     await userManager.AddToRoleAsync(defaultUser, Roles.SuperAdmin.ToString());
-                }
-                await roleManager.SeedClaimsForSuperAdmin();
-            }
-        }
-        private async static Task SeedClaimsForSuperAdmin(this RoleManager<IdentityRole> roleManager)
-        {
-            var adminRole = await roleManager.FindByNameAsync("SuperAdmin");
-            await roleManager.AddClaimAsync(adminRole, new Claim("Permission", "Permission.CanViewAllUsers"));
-            await roleManager.AddPermissionClaim(adminRole, "Users");
-        }
-        public static async Task AddPermissionClaim(this RoleManager<IdentityRole> roleManager, IdentityRole role, string module)
-        {
-            var allClaims = await roleManager.GetClaimsAsync(role);
-            var allPermissions = Permissions.GeneratePermissionsForModule(module);
-            foreach (var permission in allPermissions)
-            {
-                if (!allClaims.Any(a => a.Type == "Permission" && a.Value == permission))
-                {
-                    await roleManager.AddClaimAsync(role, new Claim("Permission", permission));
+                    await userManager.AddClaimAsync(defaultUser, new Claim("Permission" , "Permission.CanViewAllUsers"));
                 }
             }
         }
+       
     }
 }

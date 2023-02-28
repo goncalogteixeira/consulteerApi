@@ -10,3 +10,6 @@ C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\D
 C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\refint\Consulteer.Infrastructure.dll
 C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.pdb
 C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\ref\Consulteer.Infrastructure.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\bin\Debug\net6.0\Consulteer.Application.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\bin\Debug\net6.0\Consulteer.Application.pdb
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.Infrastructure\obj\Debug\net6.0\Consulteer.Infrastructure.csproj.CopyComplete

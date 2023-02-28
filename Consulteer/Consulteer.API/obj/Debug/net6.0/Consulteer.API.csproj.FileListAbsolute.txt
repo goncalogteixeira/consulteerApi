@@ -90,3 +90,7 @@ C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0
 C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\AspNetCoreHero.Results.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Goncalo\Documents\consulteer\Consulteer\Consulteer.API\bin\Debug\net6.0\System.Security.Permissions.dll
