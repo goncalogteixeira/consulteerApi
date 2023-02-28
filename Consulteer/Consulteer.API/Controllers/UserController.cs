@@ -40,6 +40,10 @@ namespace Consulteer.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Me()
         {
+            if(User.Identity == null || string.IsNullOrEmpty(User.Identity.Name))
+            {
+                return BadRequest();
+            }
             var currentUser = await _userManager.FindByEmailAsync(User.Identity.Name);
             return Ok(new UserDTO { Email = currentUser.Email, Id = currentUser.Id, Name = currentUser.UserName });
         }
